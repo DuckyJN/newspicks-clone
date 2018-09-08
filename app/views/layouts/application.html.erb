@@ -37,7 +37,14 @@
     <div class="notice alert-info"><%= notice %></div>
     <div class="alert alert-warning"><%= alert %></div>
     <!-- Modal Content -->
-    <div class="modal" style="display: none;"> Hi</div>
+    <div class="modal" style="display: none;">
+      <div class="background" />
+      <div class="modal-content-wrapper">
+        <div class="modal-content dialog">
+          <img class="close-btn" src="/close.png">
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
