@@ -8,7 +8,11 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< HEAD
   # config.secret_key = 'f8dd207053eeb9cb02510e2209eac884cf508d3a7582f4c605c3ea934923b7488e85988f587079f59394b6bf93e39e341fbe1ff520e1b197c85d05caf7fb86b3'
+=======
+  # config.secret_key = '9034614fc47f77fca560923115c2d4c4659fdf92f33806c347d8eac2389256733dd9b65bcb1ecde77d767d8427a205f2f6351deff621bfadfabae6023cd2d12d'
+>>>>>>> 9007702689e828db91e40c1e9365a3e7899b7e00
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -18,7 +22,11 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+<<<<<<< HEAD
   config.mailer_sender = 'jnguye74@gmail.com'
+=======
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+>>>>>>> 9007702689e828db91e40c1e9365a3e7899b7e00
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -114,7 +122,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
+<<<<<<< HEAD
   # config.pepper = '3a6b744db6a9098f9ccd75cc6c4534aaec970a4a27122903e8a1961aa797f3df36f24b4ed0a09ffcbcb0d24cf2961d2f4b78987f8827caa1316a7d0a6aa70929'
+=======
+  # config.pepper = '14d0e6a60de67d48c3db0c139eb19bfa52181ec7607ca1bf0ec56a94ab738165be7dc984effc68d51eee3e96ae9c3ef9dc5526cbf64c07be84ba4cb41e7e8077'
+>>>>>>> 9007702689e828db91e40c1e9365a3e7899b7e00
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -251,7 +263,11 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
+<<<<<<< HEAD
   config.sign_out_via = :get
+=======
+  config.sign_out_via = :delete
+>>>>>>> 9007702689e828db91e40c1e9365a3e7899b7e00
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
