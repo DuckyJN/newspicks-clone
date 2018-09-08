@@ -63,4 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'react-rails'
 gem 'react_rails_modal'
+gem 'jquery-rails'
+gem 'rails-ujs'
 gem 'bootstrap'
+gem 'popper_js'
