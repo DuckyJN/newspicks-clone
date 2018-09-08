@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -29,13 +30,14 @@
       <div class="right-items">
         <div class="register-or-login-items">
           <div class="register">アカウント登録</div>
-          <div class="login">ログイン</div>
+          <div class="login" onClick="toggle_visibility('modal')">ログイン</div>
         </div>
       </div>
     </div>
     <div class="notice alert-info"><%= notice %></div>
     <div class="alert alert-warning"><%= alert %></div>
     <!-- Modal Content -->
+    <div class="modal" style="display: none;"> Hi</div>
     <%= yield %>
   </body>
 </html>
