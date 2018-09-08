@@ -13,13 +13,50 @@
  *= require_tree .
  *= require_self
  */
-
- ul.hmenu {
-  list-style: none;	
-  margin: 0 0 2em;
-  padding: 0;
+ 
+ .header .right-items {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
-ul.hmenu li {
-  display: inline;  
+ .header .register-or-login-items {
+  float: left;
+  margin-right: 35px;
+  margin-top: 11px;
+  color: #FFF;
+  font-size: 86%;
+}
+
+.header .register-or-login-items .register {
+  float: left;
+  margin-right: 10px;
+  padding: 6px 10px;
+  font-size: 12px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.header .register-or-login-items .login {
+  float: left;
+  cursor: pointer;
+  margin-right: 0;
+  padding: 5px 12px;
+  background-color: #4277EC;
+  font-weight: 700;
+  font-size: 12px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.login:hover {
+  text-decoration: underline;
+}
+
+.register:hover {
+  text-decoration: underline;
 }
