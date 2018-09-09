@@ -13,3 +13,151 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #EFEFEF;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-width: 800px;
+  width: auto;
+  background-color: #231F20;
+  box-shadow: 0 0 2px #dedede, 0 0 8px #808080;
+}
+
+.hamburger-menu img {
+  position: absolute;
+  width: 28px;
+  height: 32px;
+  margin-left: 20px;
+  margin-top: 9px;
+  opacity: .9;
+}
+
+.hamburger-menu img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.search-box-container {
+  position: absolute;
+  margin-left: 70px;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+}
+
+.search-box-container .search-box {
+  position: relative;
+  border-radius: 20px;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  margin-top: 10px;
+}
+
+.search-box .search-icon {
+  float: left;
+  width: 16px;
+  margin-top: 7px;
+  margin-left: 15px;
+}
+
+.search-wrapper {
+  position: absolute;
+  background-color: #3e3a3b;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+}
+
+.search {
+  background-color: #3e3a3b;
+  color: #FFF;
+  height: 22px;
+  width: 100%;
+  left: 20px;
+  border-radius: 30px;
+  margin-top: 5px;
+  border: none;
+  padding-left: 10px;
+}
+
+.search:hover {
+  background-color: #585555;
+}
+
+.search:active {
+  outline-color: none;
+}
+
+.header .logo {
+  height: auto;
+  text-align: center;
+  display: block;
+  margin: 0;
+}
+
+.logo img {
+  margin-top: 14px;
+  opacity: .9;
+  height: 22px;
+}
+
+.logo img:hover {
+  opacity: 1;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.header .right-items {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.register-or-login-items {
+  position: relative;
+  color: #ffffff;
+  margin-right: 35px;
+  margin-top: 12px;
+}
+
+.login {
+  background-color: #4769ef;
+  text-align: center;
+  float: left;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+
+}
+
+.register {
+  float: left;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.register-or-login-items .login:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.register-or-login-items .register:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
