@@ -1,12 +1,10 @@
 <div class="modal-content-wrapper">
-  <div class="modal-content dialog">
+  <div class="modal-content-dialog">
     <div class="modal-header">
     <img class="close-btn" src="/close.png" class="close" data-dismiss="modal">
       <h2 class="modal-title" id="myModalLabel">ログイン</h2>
       <div class="go-register">
-        <span class="go-to">アカウントをお持ちでない方は</span>
-        <span class="link register">新規登録</span>
-        "へ"
+        <span class="go-to">アカウントをお持ちでない方は</span><span class="link register">新規登録</span><span>へ</span>
       </div>
     </div>
     <div class="modal-body">
@@ -27,15 +25,11 @@
             <%= f.label :remember_me %>
           </div>
         <% end -%>
-
+        
         <div class="actions">
           <%= f.submit "ログイン" %>
         </div>
       <% end %>
     </div>
-    <div class="modal-footer">
-      <button class="btn btn-primary">ログイン</button>
-    </div>
   </div>
 </div>
-<%= render "devise/shared/links" %>

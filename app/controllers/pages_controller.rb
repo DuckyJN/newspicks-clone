@@ -1,10 +1,21 @@
 class PagesController < ApplicationController
-  def home
+
+  def content
+    
   end
 
-  def about
-    @user = User.all
+  def menu
+
   end
+
+  def nav
+
+  end
+
+  def stream
+
+  end
+
   def new
     respond_to do |format|
       format.html
