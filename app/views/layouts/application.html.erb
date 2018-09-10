@@ -16,37 +16,13 @@
       <div class="pick-stream fixed-left"></div>
       <div class="page-content"></div>
       <div class="menu" style="display: none;"></div>
-      <div class="header">
-        <div class="hamburger-menu">
-          <img src="/hamburger.png">
-        </div>
-        <div class="search-box-container">
-          <div class="search-box">
-            <img class="search-icon" src="/search_icon.png">
-            <div class="search-wrapper">
-              <input class="search" maxlength="200" type="text" id="global-search-box" placeholder="検索する" value="">
-            </div>
-          </div>
-        </div>
-      <a class="logo clear-index-cache" href="/"><img src="/newspicks_logo.png"></a>
-      <div class="right-items">
-        <div class="register-or-login-items">
-          <div class="register">アカウント登録</div>
-          <div class="login">ログイン</div>
-        </div>
-      </div>
-    </div>
+      <%= render 'pages/menu' %>
     <div class="notice alert-info"><%= notice %></div>
     <div class="alert alert-warning"><%= alert %></div>
     <!-- Modal Content -->
     <div class="modal" style="display: none;">
-      <div class="background" />
-      <div class="modal-content-wrapper">
-        <div class="modal-content dialog">
-          <img class="close-btn" src="/close.png">
-          <%= render "devise/sessions#new" %>
-        </div>
-      </div>
+      <div class="background"></div>
+      <%= link_to 'Log in', new_user_session_path %>
     </div>
     <%= yield %>
     <%= javascript_include_tag 'menu_items' %>

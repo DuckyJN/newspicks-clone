@@ -178,3 +178,12 @@ img {
   height: 100%;
   opacity: .7;
 }
+
+.modal-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 100%;
+}
