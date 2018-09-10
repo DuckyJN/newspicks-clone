@@ -31,23 +31,23 @@
       <a class="logo clear-index-cache" href="/"><img src="/newspicks_logo.png"></a>
       <div class="right-items">
         <div class="register-or-login-items">
-          <div class="register">アカウント登録</div>
-          <div class="login" onClick="toggle_visibility('modal')">ログイン</div>
+          <div class="register" onclick="toggle_visibility('modal')">アカウント登録</div>
+          <div class="login" onclick="toggle_visibility('modal')">ログイン</div>
         </div>
       </div>
     </div>
     <div class="notice alert-info"><%= notice %></div>
     <div class="alert alert-warning"><%= alert %></div>
     <!-- Modal Content -->
-    <div class="modal" style="display: none;">
+    <div class="modal" style="display: none;" onclick="close_visibility('modal')">
       <div class="background" />
       <div class="modal-content-wrapper">
         <div class="modal-content dialog">
           <img class="close-btn" src="/close.png">
-          
         </div>
       </div>
     </div>
     <%= yield %>
+    <%= javascript_include_tag 'menu_items' %>
   </body>
 </html>

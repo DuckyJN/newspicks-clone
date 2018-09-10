@@ -16,11 +16,3 @@
 //= bootstrap
 //= require_tree .
 
-function toggle_visibility(modal) {
-  var show = document.getElementsByClassName(modal)[0];
-  var show_body = document.getElementsByTagName('body')[0];
-  if(show.style.display == 'none') {
-    show.style.display = 'block';
-    show_body.style.overflow = 'hidden';
-  }
-}

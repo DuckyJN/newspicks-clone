@@ -29,6 +29,7 @@ body {
   width: auto;
   background-color: #231F20;
   box-shadow: 0 0 2px #dedede, 0 0 8px #808080;
+  z-index: 2;
 }
 
 .hamburger-menu img {
@@ -160,4 +161,20 @@ img {
 .register-or-login-items .register:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.background {
+  background-color: #393637;
+  width: 100%;
+  height: 100%;
+  opacity: .7;
 }
