@@ -4,13 +4,13 @@ var modalContent = document.getElementsByClassName('modal')[0];
 
 if(loginButton) {
   loginButton.addEventListener("click",function() {
-     toggle_visibility("modal");
+     toggle_visibility_login("modal");
   });
 }
 
 if(registerButton) {
   registerButton.addEventListener("click",function() {
-     toggle_visibility("modal");
+     toggle_visibility_register("modal");
   });
 }
 
@@ -20,7 +20,15 @@ if(modalContent) {
   })
 }
 
-function toggle_visibility(modal) {
+function toggle_visibility_login(modal) {
+  var show = document.getElementsByClassName(modal)[0];
+  if(show.style.display == 'none') {
+    show.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function toggle_visibility_register(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
     show.style.display = 'block';
