@@ -2,14 +2,16 @@
   <div class="hamburger-menu">
     <img src="/hamburger.png">
   </div>
-  <div class="search-box-container">
-    <div class="search-box">
-      <img class="search-icon" src="/search_icon.png">
-      <div class="search-wrapper">
-        <input class="search" maxlength="200" type="text" id="global-search-box" placeholder="検索する" value="">
+  <% if user_signed_in? %>
+    <div class="search-box-container">
+      <div class="search-box">
+        <img class="search-icon" src="/search_icon.png">
+        <div class="search-wrapper">
+          <input class="search" maxlength="200" type="text" id="global-search-box" placeholder="検索する" value="">
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
   <a class="logo clear-index-cache" href="/"><img src="/newspicks_logo.png"></a>
   <div class="right-items">
     <div class="register-or-login-items">
