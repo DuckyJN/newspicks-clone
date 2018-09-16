@@ -1,9 +1,4 @@
 class PagesController < ApplicationController
-
-  def content
-    
-  end
-
   def menu
 
   end
@@ -22,4 +17,5 @@ class PagesController < ApplicationController
       format.js
     end
   end
+
 end

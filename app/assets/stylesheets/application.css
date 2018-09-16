@@ -224,3 +224,56 @@ a:hover {
 .modal .close-btn:hover {
   opacity: .8;
 }
+
+.page-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 192px;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.news-card {
+  box-sizing: border-box;
+}
+
+.vertical {
+  background-color : #FFF;
+  margin: 0 2% 2% 0;
+  width: 30%;
+  height: 355px;
+}
+
+.centering-page-content {
+  width: 90%;
+  margin: auto;
+}
+
+.section {
+  padding: 35px 24px 32px;
+}
+
+.thumbnail {
+  min-height: 102.4px;
+  height: 40%;
+}
+
+.article-title {
+  font-weight: 700;
+  margin: 6% 6% 2%;
+  height: 12%;
+  font-size: 120%;
+}
+
+.meta {
+  border-bottom: 1px solid #EAEAEA;
+  font-size: 10px;
+  margin: 8px 16px 0;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  color: #999;
+}
