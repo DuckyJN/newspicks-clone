@@ -1,7 +1,6 @@
 var loginButton = document.getElementsByClassName('login')[0];
 var registerButton = document.getElementsByClassName('register')[0];
-var modalContent = document.getElementsByClassName('modal')[0];
-var modalContentDialog = document.getElementsByClassName('modal-content-dialog')[0];
+var closeButton = document.getElementsByClassName('close-btn')[0];
 
 
 if(loginButton) {
@@ -16,8 +15,8 @@ if(registerButton) {
   });
 }
 
-if(modalContent) {
-  modalContent.addEventListener("click", function() {
+if(closeButton) {
+  closeButton.addEventListener("click", function() {
     close_visibility("modal");
   })
 }
