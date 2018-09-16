@@ -1,6 +1,8 @@
 var loginButton = document.getElementsByClassName('login')[0];
 var registerButton = document.getElementsByClassName('register')[0];
 var modalContent = document.getElementsByClassName('modal')[0];
+var modalContentDialog = document.getElementsByClassName('modal-content-dialog')[0];
+
 
 if(loginButton) {
   loginButton.addEventListener("click",function() {
