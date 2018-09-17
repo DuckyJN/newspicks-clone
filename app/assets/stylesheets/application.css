@@ -283,20 +283,3 @@ a:hover {
   padding-bottom: 12px;
   color: #999;
 }
-
-.login-modal {
-  display: none;
-}
-
-.register-modal {
-  display: none;
-}
-
-.link-login, .link-register {
-  text-decoration: underline;
-  color: blue;
-}
-
-.link-login:hover, .link-register:hover {
-  opacity: .8;
-}

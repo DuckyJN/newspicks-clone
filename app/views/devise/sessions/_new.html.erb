@@ -1,4 +1,4 @@
-<div class="modal-content-wrapper login-modal">
+<div class="modal-content-wrapper-register">
   <div class="modal-content-dialog">
     <div class="modal-header">
     <img class="close-btn" src="/close.png" class="close" data-dismiss="modal">
@@ -8,13 +8,13 @@
       </div>
     </div>
     <div class="modal-body">
-      <%= form_for(resource, as: resource_name, :html => { :id => "register_form" }, url: session_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field-input-box">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録したメールアドレス／NewsPicks ID", id: "login_email_field" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録したメールアドレス／NewsPicks ID" %>
         </div>
 
         <div class="field-input-box">
-          <%= f.password_field :password, autocomplete: "current-password", :placeholder => "パスワード", id: "login_password_field" %>
+          <%= f.password_field :password, autocomplete: "current-password", :placeholder => "パスワード" %>
         </div>
 
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
@@ -22,7 +22,7 @@
         <% end -%>
         
         <div class="actions">
-          <%= f.submit "ログイン", id: "login_button" %>
+          <%= f.submit "ログイン" %>
         </div>
       <% end %>
     </div>
