@@ -17,7 +17,7 @@
         <div class="register">アカウント登録</div>
         <div class="login">ログイン</div>
       <% else %>
-        <div>hi</div>
+        <div><%= current_user.email %></div>
       <% end %>
     </div>
   </div>
