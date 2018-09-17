@@ -1,6 +1,6 @@
 <div class="section top-news centering-page-content">
   <div class="news-container">
-    <% Article.order("created_at DESC").limit(10).each do |article| %>
+    <% Article.order("created_at DESC").limit(12).each do |article| %>
       <div class="news-card vertical">
         <a href="<%= article.link %>">
           <div class="thumbnail" style="background-image: url(<%= article.image %>)"></div>
