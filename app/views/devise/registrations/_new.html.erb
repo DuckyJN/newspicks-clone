@@ -1,4 +1,4 @@
-<div class="modal-content-wrapper">
+<div class="modal-content-wrapper register-modal">
   <div class="modal-content-dialog">
     <div class="modal-header">
     <img class="close-btn" src="/close.png" class="close" data-dismiss="modal">
@@ -8,22 +8,22 @@
       </div>
     </div>
     <div class="modal-body">
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, :html => { :id => "login_form" }, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
 
-        <div class="field">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録するメールアドレス" %>
+        <div class="field-input-box">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録するメールアドレス", id: "register_email_field" %>
         </div>
 
-        <div class="field">
+        <div class="field-input-box">
           <% if @minimum_password_length %>
           <em>(<%= @minimum_password_length %> characters minimum)</em>
           <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password", :placeholder => "パスワード" %>
+          <%= f.password_field :password, autocomplete: "new-password", :placeholder => "パスワード", id: "register_password_field" %>
         </div>
 
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "新規登録", id: "register_button" %>
         </div>
       <% end %>
     </div>
