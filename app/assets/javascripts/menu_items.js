@@ -2,7 +2,6 @@ var loginButton = document.getElementsByClassName('login')[0];
 var registerButton = document.getElementsByClassName('register')[0];
 var closeButton = document.getElementsByClassName('close-btn')[0];
 
-
 if(loginButton) {
   loginButton.addEventListener("click",function() {
      toggle_visibility_login("modal");

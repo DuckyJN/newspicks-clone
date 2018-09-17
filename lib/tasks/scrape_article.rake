@@ -10,8 +10,8 @@ namespace :scrape_article do
         scraper = Article.find_or_initialize_by(title: title)
         scraper.site = "TechCrunch"
         scraper.body = entry.css('div.block-content').css('p.excerpt').text
-        scraper.image = entry.css('div.block-content').css('a').css('img').map{ |i| i['src'] }.join
-        scraper.link = entry.css('div.block-content').css('p.excerpt').css('a').map{ |i| i['href'] }.join
+        scraper.image = entry.css('div.block-content').css('a').css('img').map{ |i| i['src'] }
+        scraper.link = entry.css('div.block-content').css('p.excerpt').css('a').map{ |i| i['href'] }
         scraper.save!
         puts title
       end
