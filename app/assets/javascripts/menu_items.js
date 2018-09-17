@@ -1,10 +1,10 @@
 var loginButton = document.getElementsByClassName('login')[0];
 var registerButton = document.getElementsByClassName('register')[0];
-var modalContent = document.getElementsByClassName('modal')[0];
-var searchBar= document.getElementsByClassName('search')[0];
-var go_login = document.getElementsByClassName('go-login')[0];
-var go_register = document.getElementsByClassName('go-register')[0];
-var content_dialog = document.getElementsByClassName('modal-content-dialog')[0];
+var closeButton = document.getElementsByClassName('close-btn')[0];
+var closeButton2 = document.getElementsByClassName('close-btn')[1];
+var loginModal = document.getElementsByClassName('login-modal')[0];
+var registerModal = document.getElementsByClassName('register-modal')[0];
+
 
 if(loginButton) {
   loginButton.addEventListener("click", function() {
@@ -30,10 +30,12 @@ if(registerButton) {
   });
 }
 
-if(content_dialog) {
-  content_dialog.addEventListener("click", function() {
-    document.getElementsByClassName("modal")[0];
-    document.body.style.overflow = 'hidden';
+if(closeButton) {
+  closeButton.addEventListener("click", function() {
+    close_visibility("modal");
+  })
+  closeButton2.addEventListener("click", function() {
+    close_visibility("modal");
   })
 }
 
@@ -47,6 +49,7 @@ function toggle_visibility_login(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
     show.style.display = 'block';
+    loginModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     document.getElementsByClassName("registration-wrapper")[0].style.display = "none";
     document.getElementsByClassName("login-wrapper")[0].style.display = "block";
@@ -57,6 +60,7 @@ function toggle_visibility_register(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
     show.style.display = 'block';
+    registerModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     document.getElementsByClassName("login-wrapper")[0].style.display = "none";
     document.getElementsByClassName("registration-wrapper")[0].style.display = "block";
@@ -67,6 +71,8 @@ function close_visibility(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'block') {
     show.style.display = 'none';
+    registerModal.style.display = 'none';
+    loginModal.style.display = 'none';
     document.body.style.overflow = 'visible';
   }
 }
