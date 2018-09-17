@@ -148,6 +148,8 @@ img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+
+
 }
 
 .register {
@@ -299,4 +301,19 @@ a:hover {
   transition: all 0.1s linear 0s;
 }
 
+.login-modal {
+  display: none;
+}
 
+.register-modal {
+  display: none;
+}
+
+.link-login, .link-register {
+  text-decoration: underline;
+  color: blue;
+}
+
+.link-login:hover, .link-register:hover {
+  opacity: .8;
+}

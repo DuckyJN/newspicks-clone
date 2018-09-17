@@ -1,20 +1,20 @@
-<div class="modal-content-wrapper">
+<div class="modal-content-wrapper login-modal">
   <div class="modal-content-dialog">
     <div class="modal-header">
     <img class="close-btn" src="/close.png" class="close" data-dismiss="modal">
       <h2 class="modal-title" id="myModalLabel">ログイン</h2>
-      <div class="go-register">
-        <span class="go-to">アカウントをお持ちでない方は<span class="link register">新規登録</span>へ</span>
+      <div class="go-login">
+        <span class="go-to">アカウントをお持ちでない方は<span class="link-register">新規登録</span>へ</span>
       </div>
     </div>
     <div class="modal-body">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, :html => { :id => "register_form" }, url: session_path(resource_name)) do |f| %>
         <div class="field-input-box">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録したメールアドレス／NewsPicks ID" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "登録したメールアドレス／NewsPicks ID", id: "login_email_field" %>
         </div>
 
         <div class="field-input-box">
-          <%= f.password_field :password, autocomplete: "current-password", :placeholder => "パスワード" %>
+          <%= f.password_field :password, autocomplete: "current-password", :placeholder => "パスワード", id: "login_password_field" %>
         </div>
 
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
@@ -22,7 +22,7 @@
         <% end -%>
         
         <div class="actions">
-          <%= f.submit "ログイン" %>
+          <%= f.submit "ログイン", id: "login_button" %>
         </div>
       <% end %>
     </div>
