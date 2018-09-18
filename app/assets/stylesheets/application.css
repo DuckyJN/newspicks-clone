@@ -314,6 +314,7 @@ a:hover {
 
 .link-login:hover, .link-register:hover {
   opacity: .8;
+  cursor: pointer;
 }
 
 .current-login {
