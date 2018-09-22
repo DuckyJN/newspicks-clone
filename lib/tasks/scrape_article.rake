@@ -1,3 +1,6 @@
+require 'yaml'
+conf = YAML.load_file("lib/database.yml")
+
 namespace :scrape_article do
   desc "TODO"
   task scrape_techcrunch: :environment do

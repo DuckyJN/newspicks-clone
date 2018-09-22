@@ -68,4 +68,4 @@ gem 'rails-ujs'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'flexbox-rails'
-
+gem 'whenever', require: false
