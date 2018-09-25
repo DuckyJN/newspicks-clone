@@ -1,9 +1,9 @@
-require 'yaml'
-conf = YAML.load_file("lib/database.yml")
 
 namespace :scrape_article do
   desc "TODO"
   task scrape_techcrunch: :environment do
+    environment = (ENV.include?("RAILS_ENV")) ? (ENV["RAILS_ENV"]) : 'development'
+    ENV["RAILS_ENV"] = RAILS_ENV = environment
     page_url = "https://jp.techcrunch.com/page/2/"
     page = Nokogiri::HTML(open(page_url))
     article_list = page.css('.river-block').css('.block').css('.block-thumb')
