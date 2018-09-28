@@ -17,7 +17,8 @@
         <div class="register">アカウント登録</div>
         <div class="login">ログイン</div>
       <% else %>
-        <div>hi</div>
+        <div class="current-login"><%= current_user.email %></div>
+        <%= link_to('ログアウト', destroy_user_session_path, method: :delete, :class => "logout") %>
       <% end %>
     </div>
   </div>
