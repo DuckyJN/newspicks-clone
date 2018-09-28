@@ -69,3 +69,4 @@ gem 'bootstrap'
 gem 'popper_js'
 gem 'flexbox-rails'
 gem 'whenever', require: false
+gem 'redis', '~> 4.0', '>= 4.0.2'
