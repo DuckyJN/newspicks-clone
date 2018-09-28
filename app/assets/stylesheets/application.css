@@ -317,3 +317,7 @@ a:hover {
 .link-login:hover, .link-register:hover {
   opacity: .8;
 }
+
+.thumbnail:hover, .article-title:hover {
+  opacity: .6;
+}
