@@ -39,6 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -68,4 +69,5 @@ gem 'rails-ujs'
 gem 'bootstrap'
 gem 'popper_js'
 gem 'flexbox-rails'
-
+gem 'whenever', require: false
+gem 'redis', '~> 4.0', '>= 4.0.2'

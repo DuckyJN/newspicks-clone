@@ -4,7 +4,8 @@ var closeButton = document.getElementsByClassName('close-btn')[0];
 var closeButton2 = document.getElementsByClassName('close-btn')[1];
 var loginModal = document.getElementsByClassName('login-modal')[0];
 var registerModal = document.getElementsByClassName('register-modal')[0];
-
+var goLogin = document.getElementsByClassName('go-login')[0];
+var goRegister = document.getElementsByClassName('go-register')[0];
 
 if(loginButton) {
   loginButton.addEventListener("click", function() {
@@ -30,6 +31,18 @@ if(registerButton) {
   });
 }
 
+if(goLogin) {
+  goLogin.addEventListener("click", function() {
+    toggle_visibility_login("modal");
+  })
+}
+
+if(goRegister) {
+  goRegister.addEventListener("click", function() {
+    toggle_visibility_register("modal");
+  })
+}
+
 if(closeButton) {
   closeButton.addEventListener("click", function() {
     close_visibility("modal");
@@ -49,6 +62,8 @@ function toggle_visibility_login(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
     show.style.display = 'block';
+    if(registerModal.style.display == 'block')
+      registerModal.style.display = 'none';
     loginModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     document.getElementsByClassName("registration-wrapper")[0].style.display = "none";
@@ -60,6 +75,8 @@ function toggle_visibility_register(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
     show.style.display = 'block';
+    if(loginModal.style.display == 'block')
+      loginModal.style.display = 'none';
     registerModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
     document.getElementsByClassName("login-wrapper")[0].style.display = "none";

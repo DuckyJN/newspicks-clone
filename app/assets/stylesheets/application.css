@@ -1,23 +1,9 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 body {
   background-color: #EFEFEF;
   width: 100%;
 }
+
+/* ナビゲーション */
 
 .header {
   position: fixed;
@@ -32,6 +18,8 @@ body {
   z-index: 2;
 }
 
+/* ハンバーガーメニュー */
+
 .hamburger-menu img {
   position: absolute;
   width: 28px;
@@ -45,6 +33,8 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+
+/* 検索機能 */
 
 .search-box-container {
   position: absolute;
@@ -102,6 +92,8 @@ body {
   outline-color: none;
 }
 
+/* ロゴ */
+
 .header .logo {
   height: auto;
   text-align: center;
@@ -123,6 +115,8 @@ body {
 img {
   vertical-align: middle;
 }
+
+/* ログイン・ログアウト */
 
 .header .right-items {
   position: absolute;
@@ -148,8 +142,6 @@ img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-
-
 }
 
 .register {
@@ -167,6 +159,10 @@ img {
   text-decoration: underline;
   cursor: pointer;
 }
+
+/*-------------------------
+      モーダルコンテンツ
+-------------------------*/
 
 .modal {
   position: fixed;
@@ -263,11 +259,10 @@ a:hover {
 }
 
 .thumbnail {
-  min-height: 102.4px;
   height: 35%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -315,4 +310,63 @@ a:hover {
 
 .link-login:hover, .link-register:hover {
   opacity: .8;
+}
+
+.thumbnail:hover, .article-title:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+.current-login {
+  float: left;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.logout {
+  background-color: #4769ef;
+  text-align: center;
+  float: left;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 12px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.logout:visited {
+  color: #FFF;
+}
+
+.register-or-login-items .logout:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Left bar */
+
+.fixed-left{
+  position: fixed;
+  overflow: none;
+  float: left;
+  width: 200px;
+  top: 50px;
+  bottom: 0;
+}
+
+.user-info {
+  padding-top: 24px;
+}
+
+.user-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.no-account {
+  color: gray;
+
 }
