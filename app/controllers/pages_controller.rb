@@ -1,21 +1,16 @@
 class PagesController < ApplicationController
-  def menu
-
-  end
-
-  def nav
-
-  end
-
-  def stream
-
-  end
 
   def new
     respond_to do |format|
       format.html
       format.js
     end
+  end
+
+  def show
+    @articles = Articles.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
+    @page_title = @articles.article[:id]
   end
 
 end
