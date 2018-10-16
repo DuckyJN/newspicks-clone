@@ -1,7 +1,10 @@
 class ArticlesController < ApplicationController
-  has_many :comments, dependent: :destroy
 
   def index
     @articles = Article.all
+  end
+
+  def show
+    @article_item = Article.find(params[:id])
   end
 end

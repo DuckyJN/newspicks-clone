@@ -1,5 +1,11 @@
-<%= image_tag Article.image %>
+<%= link_to @article_item.link do %>
 
-<h1><%= Article.title %></h1>
+<%= image_tag @article_item.image %>
 
-<p><%= Article.body %></p>
+<h1><%= @article_item.title %></h1>
+<% end %>
+<div class="site"><%= @article_item.site %></div>
+
+<%= link_to @article_item.link do %>
+  続き読む
+<% end %>

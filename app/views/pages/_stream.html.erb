@@ -1,13 +1,15 @@
 <div class="pick-stream fixed-left">
-  <% unless user_signed_in? %>
-    <div class="user-profile">
-      <div class="user-info no-account">
-        <div class="user-icon create-account"><img src="/no-profile-picture.png"></div>
-        <div class="user-info no-account">No Account</div>
-        <div class="create-account"> <button type="button">アカウントを作成する</button> </div>
+  <div class="stream-container">
+    <% unless user_signed_in? %>
+      <div class="user-profile">
+        <div class="user-info no-account">
+          <div class="user-icon create-account"><img src="/no-profile-picture.png"></div>
+          <div class="user-info no-account">No Account</div>
+          <div class="create-account"> <button type="button">アカウントを作成する</button> </div>
+        </div>
       </div>
-    </div>
-  <% else %>
+    <% else %>
 
-  <% end %>
+    <% end %>
+  </div>
 </div>

@@ -2,10 +2,10 @@
   <div class="news-container">
     <% Article.order("created_at DESC").limit(12).each do |article| %>
       <div class="news-card vertical">
-        <a href="<%= article.link %>">
+        <%= link_to article do %>
           <div class="thumbnail" style="background-image: url(<%= article.image %>)"></div>
           <div class="article-title"><%=h truncate(article.title, length: 26) %></div>
-        </a>
+        <% end %>
         <div class="meta">
           <div class="site"><%= article.site %></div>
         </div>
