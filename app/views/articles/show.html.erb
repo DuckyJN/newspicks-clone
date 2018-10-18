@@ -28,16 +28,23 @@
         </div>
       </div>
     </div>
-  </div>
 
-  <%= form_for @comment, url: '#' do |f| %>
-    <div class="form-group">
-      <%= f.label :content %>
-      <%= f.text_area :content, class: 'form-control' %>
-
-      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+    <div class="news-comment">
+      <div class="comment-area">
+        <div class="user-icon cover"><img src="/no-profile-picture.png"></div>
+        <%= form_for @comment, url: '#' do |f| %>
+          <div class="form-group">
+            <%= f.text_area :content, class: 'form-control', :placeholder => "コメントを書く（任意）" %>
+            <div class="post-comment">
+              <%= f.submit '', class: 'btn btn-primary' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
+  </div>
+  
+  
 
   <%= render @article_item.comments %>
 </div>

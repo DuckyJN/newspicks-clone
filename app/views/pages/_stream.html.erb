@@ -1,34 +1,33 @@
 <div class="pick-stream fixed-left">
   <div class="stream-container">
-    <% unless user_signed_in? %>
-      <div class="user-profile">
-        <div class="user-info no-account">
-          <div class="user-icon create-account"><img src="/no-profile-picture.png"></div>
+    <div class="user-profile">
+      <div class="user-info no-account">
+        <div class="user-icon create-account"><img src="/no-profile-picture.png"></div>
+        <% unless user_signed_in? %>          
           <div class="user-info no-account">No Account</div>
-          <div class="create-account"> <button type="button">アカウントを作成する</button> </div>
-        </div>
-        <div class="follow-info">
-          <div class="follow-box">
-            <div class="following">
-              -
-            </div>
-            <div class="following-caption">
-              フォロー
-            </div>
+          <div class="create-account"> <button type="button">アカウントを作成する</button></div>
+        <% else %>
+          <div class="user-info logged-in"><%= current_user.email %></div>
+        <% end %>
+      </div>
+      <div class="follow-info">
+        <div class="follow-box">
+          <div class="following">
+            -
           </div>
-          <div class="follower-box">
-            <div class="follower">
-              -
-            </div>
-            <div class="follower-caption">
-              フォロワー
-            </div>
+          <div class="following-caption">
+            フォロー
+          </div>
+        </div>
+        <div class="follower-box">
+          <div class="follower">
+            -
+          </div>
+          <div class="follower-caption">
+            フォロワー
           </div>
         </div>
       </div>
-      
-    <% else %>
-
-    <% end %>
+    </div>
   </div>
 </div>

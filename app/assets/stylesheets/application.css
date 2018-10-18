@@ -34,6 +34,35 @@ body {
   cursor: pointer;
 }
 
+.menu {
+  flex-direction: column;
+  float: left;
+  background: #FFF;
+  width: 240px;
+  position: fixed;
+  margin-top: 50px;
+  left: auto;
+  bottom: 10px;
+  z-index: 5;
+}
+
+.main-menu {
+  margin-left: 16px 0;
+  font-size: 14px;
+}
+
+.menu-item {
+  display: block;
+  cursor: pointer;
+  padding: 16px 0 16px 32px;
+  color: #666;
+}
+
+.menu-item:hover {
+  background-color: #efefef;
+  transition: all 0.2s linear 0s;
+}
+
 /* 検索機能 */
 
 .search-box-container {
@@ -367,6 +396,13 @@ a:hover {
   padding-bottom: 9px;
 }
 
+.user-info .logged-in {
+  font-size: 14px;
+  font-weight: 700;
+  height: 14px;
+  color: #000;
+}
+
 .no-account {
   color: #999999;
   font-size: 12px;
@@ -442,6 +478,7 @@ button:hover {
   cursor: pointer;
   z-index: 2;
   opacity: .8;
+  cursor: pointer;
 }
 
 .breadcrumbs a.link {
@@ -458,6 +495,7 @@ button:hover {
   height: 12px;
   margin-right: 8px;
   vertical-align: center;
+  cursor: pointer;
 }
 
 .label {
@@ -465,11 +503,7 @@ button:hover {
   font-weight: bold;
   color: #3c3839;
   vertical-align: center;
-}
-
-.breadcrumbs a.link:hover {
   cursor: pointer;
-  opacity: .8;
 }
 
 .news-summary {
@@ -489,6 +523,7 @@ img.news-image {
 
 img.news-image:hover {
   opacity: .8;
+  cursor: pointer;
 }
 
 h1 {
@@ -525,7 +560,6 @@ div.site {
   text-align: center;
   border-radius: 6px;
   cursor: pointer;
-  transition: 
 }
 
 .read-more:hover {
@@ -533,9 +567,75 @@ div.site {
   color: #FFF;
   opacity: .9;
   transition: all 0.1s linear 0s;
+  cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: #000;
+}
+
+a.link:hover {
+  cursor: pointer;
+}
+
+/* コメント */
+
+.news-comment {
+  margin-top: 32px;
+  background-color: #FFF;
+  margin-bottom: 24px;
+}
+
+.comment-area {
+  position: relative;
+  margin-left: 32px;
+  margin-right: 32px;
+  border-bottom: solid 2px #eaeaea;
+}
+
+.cover img {
+  margin-top: 16px;
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+
+textarea {
+  resize: none;
+  border-color: #e4e4e473;
+  border-radius: 6px;
+  vertical-align: center;
+  line-height: 40px;
+  height: 40px;
+  width: 50%;
+  margin-top: 16px;
+  margin-left: 12px;
+}
+
+textarea:hover {
+  -moz-box-shadow: inset 0 0 10px #615f5f73;
+   -webkit-box-shadow: inset 0 0 10px #615f5f73;
+   box-shadow: inset 0 0 10px #615f5f73;
+   transition: all 0.1s linear 0s;
+}
+
+.post-comment {
+  float: right;
+  margin-top: 16px;
+}
+
+input[type="submit"] {
+  background: url("/btn-pick.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 110px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  opacity: .8;
+  transition: all 0.2s linear 0s;
 }
