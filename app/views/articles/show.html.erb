@@ -1,22 +1,43 @@
-<%= link_to @article_item.link do %>
-
-<%= image_tag @article_item.image %>
-
-<h1><%= @article_item.title %></h1>
-<% end %>
-<div class="site"><%= @article_item.site %></div>
-
-<%= link_to @article_item.link do %>
-  続き読む
-<% end %>
-
-<%= form_for @comment, url: '#' do |f| %>
-  <div class="form-group">
-    <%= f.label :content %>
-    <%= f.text_area :content, class: 'form-control' %>
-
-    <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+<div class="page-content">
+  <div class="breadcrumbs">
+    <%= link_to root_path, class: "link" do %>
+      <img src="/back-arrow.png">
+      <div class="label">総合トップ</div>
+    <% end %>
   </div>
-<% end %>
 
-<%= render @article_item.comments %>
+  <div class="news-summary">
+    <div class="news-container">
+      <div class="content-area">
+        <%= link_to @article_item.link do %>
+          <%= image_tag @article_item.image, class: "news-image" %>
+        <% end %>
+
+        <div class="news-area">
+          <h1 class="news-title content-area">
+            <%= link_to @article_item.link do %>
+              <%= @article_item.title %>
+            <% end %>
+          </h1>
+          <div class="site"><%= @article_item.site %></div>
+          
+          <%= link_to @article_item.link, class: "read-more" do %>
+            続きを読む
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= form_for @comment, url: '#' do |f| %>
+    <div class="form-group">
+      <%= f.label :content %>
+      <%= f.text_area :content, class: 'form-control' %>
+
+      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+
+  <%= render @article_item.comments %>
+</div>
