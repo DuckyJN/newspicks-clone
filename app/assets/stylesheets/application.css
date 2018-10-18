@@ -344,16 +344,23 @@ a:hover {
 }
 
 /* Left bar */
+/* 新しいコメントやアカウントの情報を表示する分 */
+
+.pick-stream {
+  background: #FFF;
+}
 
 .fixed-left{
   position: fixed;
   width: 192px;
   top: 50px;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 
-.user-info {
+.user-profile .user-info {
   padding-top: 24px;
 }
 
@@ -362,7 +369,56 @@ a:hover {
   height: 48px;
 }
 
+.user-info .no-account {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
 .no-account {
   color: gray;
+  font-size: 12px;
+  line-height: 1;
+}
 
+.user-info {
+  text-align: center;
+}
+
+.create-account button {
+  background-color: #FFF;
+  width: 144px;
+  height: 32px;
+  font-size: 12px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border: 1px solid #231f20;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #231f20;
+  color: #FFF;
+  transition: all .1s linear;
+}
+
+/* フォローとフォロワー */
+
+.follow-info {
+  align-items: center;
+  display: flex;
+}
+
+.follow-box, .follower-box {
+  text-align: center;
+  height: 52px;
+  flex: 50%;
+}
+
+.following, .follower {
+  font-size: 18px;
+}
+
+.following-caption, .follower-caption {
+  font-size: 8px;
 }
