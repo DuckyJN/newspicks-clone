@@ -43,7 +43,7 @@ if(closeButton) {
 
 if(hamburgerMenu) {
   hamburgerMenu.addEventListener("click", function() {
-    open_menu("main-menu");
+    open_menu("menu");
   })
 }
 
