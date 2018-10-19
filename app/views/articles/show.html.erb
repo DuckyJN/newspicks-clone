@@ -31,7 +31,9 @@
     <div class="news-comment">
       <%= render 'comments/comments_form' %>
 
-      <%= render @article.comments %>
+      <div id="comments" data-article-id="<%= @article.id %>">
+        <%= render @article.comments %>
+      </div>
     </div>
 
   </div>
