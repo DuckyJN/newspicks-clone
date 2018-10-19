@@ -3,6 +3,12 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  def new
+  end
+
+  def create
+  end
+
   def show
     @article_item = Article.friendly.find(params[:id])
 
