@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get 'article/:id', to: 'article#show', as: 'article_show'
+
   resources :articles do
-    resources :comments
+    member do
+      get :toggle_status
+    end
   end
+
+  mount ActionCable.server => '/cable'
   root 'pages#home'
   get 'pages/home'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -6,6 +6,7 @@ var loginModal = document.getElementsByClassName('login-modal')[0];
 var registerModal = document.getElementsByClassName('register-modal')[0];
 var goLogin = document.getElementsByClassName('go-login')[0];
 var goRegister = document.getElementsByClassName('go-register')[0];
+var hamburgerMenu = document.getElementsByClassName('hamburger-menu')[0];
 
 if(loginButton) {
   loginButton.addEventListener("click",function() {
@@ -40,6 +41,12 @@ if(closeButton) {
   })
 }
 
+if(hamburgerMenu) {
+  hamburgerMenu.addEventListener("click", function() {
+    open_menu("menu");
+  })
+}
+
 function toggle_visibility_login(modal) {
   var show = document.getElementsByClassName(modal)[0];
   if(show.style.display == 'none') {
@@ -70,4 +77,12 @@ function close_visibility(modal) {
     loginModal.style.display = 'none';
     document.body.style.overflow = 'visible';
   }
+}
+
+function open_menu(modal) {
+  var show = document.getElementsByClassName(modal)[0];
+  if(show.style.display != 'none')
+    show.style.display = 'none';
+  else
+    show.style.display = 'flex';
 }

@@ -1,13 +1,18 @@
 class ArticlesController < ApplicationController
-
   def index
     @articles = Article.all
   end
 
-  def show
-    @article_item = Article.find(params[:id])
+  def new
+  end
 
-    @article = Article.includes(:comments).find(params[:id])
+  def create
+  end
+
+  def show
+    @article_item = Article.friendly.find(params[:id])
+
+    @article = Article.includes(:comments).friendly.find(params[:id])
     @comment = Comment.new
   end
 end

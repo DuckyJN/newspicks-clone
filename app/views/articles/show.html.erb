@@ -24,20 +24,18 @@
           <%= link_to @article_item.link, class: "read-more" do %>
             続きを読む
           <% end %>
-
         </div>
       </div>
     </div>
+
+    <div class="news-comment">
+      <%= render 'comments/comments_form' %>
+
+      <div id="comments" data-article-id="<%= @article.id %>">
+        <%= render @article.comments %>
+      </div>
+    </div>
+
   </div>
 
-  <%= form_for @comment, url: '#' do |f| %>
-    <div class="form-group">
-      <%= f.label :content %>
-      <%= f.text_area :content, class: 'form-control' %>
-
-      <%= f.submit 'Post Comment', class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-
-  <%= render @article_item.comments %>
 </div>
