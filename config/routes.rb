@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :articles do
-    resources :comments
-  end
+
+  get 'article/:id', to: 'article#show', as: 'article_show'
 
   resources :articles do
     member do
